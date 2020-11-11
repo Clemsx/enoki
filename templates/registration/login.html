@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="sapin">
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="square col-10 col-md-8 col-lg-6">
+                    <!-- Form -->
+                    <form id='login-form' method="POST">
+                        <h1 class="d-flex justify-content-center" >Enoki</h1>
+                        
+                        <!-- Error message -->
+                        {% if form.errors %}
+                            <div class="alert alert-danger" role="alert">
+                                <p>Votre utilisateur ou mot de passe n'existent pas.</p>
+                            </div>
+                        {% endif %}
+
+                        <!-- Input fields -->
+                        <div class="form-group">
+                            <label for="username"></label>
+                            <input type="text" name="{{ form.username.name }}" id="{{ form.username.id_for_label }}" class="form-control " placeholder="Utilisateur" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password"></label>
+                            <input type="password" name="{{ form.password.name }}" id="{{ form.password.id_for_label }}" class="form-control " placeholder="Mot de passe" required>
+                        </div>
+
+                        {% csrf_token %}
+                        
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-customized">Connexion</button>
+                        </div>
+                        <!-- End input fields -->
+                    </form>
+                    <!-- Form end -->
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

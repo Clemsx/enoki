@@ -1,0 +1,81 @@
+{% extends 'base.html' %} 
+
+{% block username %}
+  <h3>{{username}}</h3>
+{% endblock username %} 
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8 offset-md-2">
+      <form id="date-counter" class="px-4 py-3 border mt-5 rounded">
+        <div class="m-0 d-flex justify-content-around align-items-center">
+          <label class="m-0" for="datepicker_from">calendrier du:</label>
+          <input
+            id="start_date"
+            type="date"
+            data-date-format="dd/mm/yyyy"
+            placeholder="01/01/2020"
+            name="start_date"
+          />
+
+          <label class="m-0" for="datepicker_to">au</label>
+          <input
+            id="end_date"
+            type="date"
+            data-date-format="dd/mm/yyyy"
+            placeholder="31/12/2020"
+            name="end_date"
+          />
+          <button type="submit" class="btn btn-primary">valider</button>
+        </div>
+      </form>
+
+      <div class="p-4 border rounded">
+        <p>Nombre de jours</p>
+        <hr />
+      
+        <ul class="p-0">
+          <li class="mon">
+            <p>Lundi</p>
+            <p>xx</p>
+          </li>
+          <li class="tue">
+            <p>Mardi</p>
+            <p>xx</p>
+          </li>
+          <li class="wed">
+            <p>Mercredi</p>
+            <p>xx</p>
+          </li>
+          <li class="thu">
+            <p>Jeudi</p>
+            <p>xx</p>
+          </li>
+          <li class="fri">
+            <p>Vendredi</p>
+            <p>xx</p>
+          </li>
+          <li class="sat">
+            <p>Samedi</p>
+            <p>xx</p>
+          </li>
+          <li class="sun">
+            <p>Dimanche</p>
+            <p>xx</p>
+          </li>
+          <li class="holiday_weekday">
+            <p>Jours fériés du Lundi au Samedi</p>
+            <p>xx</p>
+          </li>
+          <li class="holiday_sunday">
+            <p>Jours fériés le dimanche</p>
+            <p>xx</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

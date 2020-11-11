@@ -1,0 +1,33 @@
+.sapin {
+    background-image: url("img/sapins.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h3{
+    color: white;
+}
+
+.navbar-custom {
+    background-color: rgb(4, 47, 102);
+    /*rgb(4, 47, 102)*/
+}
+
+.square {
+    padding: 35px;
+    background-color: #F7F7F7;
+    border: 1px solid #DDD;
+  }
+
+ul > li {
+    border-bottom: 1px black dotted;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    align-items: center;
+}
+
+ul > li > p {
+    margin: 0;
+}
